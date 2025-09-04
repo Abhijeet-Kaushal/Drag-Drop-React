@@ -1,0 +1,110 @@
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-bottom: 3px solid #4cafef;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* .parent {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+} */
+.parent {
+  flex: 1; /* take remaining height under heading */
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.item1 {
+  background-color: #f9f9f9;
+  height: 55%;
+  width: 35%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.item1:hover,
+.item2:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.item1-1,
+.item1-2 {
+  height: 30%;
+  width: 95%;
+  display: flex;
+  /* gap: 5px; */
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  border-radius: 10px;
+  cursor: grab;
+}
+
+.item1-1:active,
+.item1-2:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.item2 {
+  background-color: #f9f9f9;
+  height: 55%;
+  width: 35%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item2-hasIsOver {
+  background-color: #ddd;
+  height: 50%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  border: 2px dashed red;
+}
