@@ -1,11 +1,6 @@
 import "./DragDropStyle.css";
 import { useState } from "react";
-import {
-  DndContext,
-  useDraggable,
-  useDroppable,
-  onDragEnd,
-} from "@dnd-kit/core";
+import { DndContext, useDraggable, useDroppable } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities"; // only for using 'transform' from useDraggable hook.
 
 export default function DragDropPage() {
@@ -74,8 +69,7 @@ export default function DragDropPage() {
 }
 
 function DraggableItem({ id, className, name }) {
-  const { attributes, listeners, setNodeRef, transform, isDragging } =
-    useDraggable({ id });
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({ id });
 
   const style = {
     transform: CSS.Translate.toString(transform),
@@ -96,7 +90,7 @@ function DraggableItem({ id, className, name }) {
 }
 
 function DropZone({ id, className, children }) {
-  const { setNodeRef, isOver } = useDroppable({ id });
+  const { setNodeRef } = useDroppable({ id });
 
   return (
     <div ref={setNodeRef} className={className}>
