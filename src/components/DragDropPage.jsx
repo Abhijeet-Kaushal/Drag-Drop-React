@@ -7,7 +7,11 @@ export default function DragDropPage() {
   const item1Array = [
     { id: "Abhijeet", className: "item1-1", name: "Abhijeet" },
     { id: "Kaushal", className: "item1-2", name: "Kaushal" },
-    { id: "Software Engineer", className: "item1-1", name: "Millionaire" },
+    {
+      id: "Software Engineer",
+      className: "item1-1",
+      name: "Software Engineer",
+    },
   ];
   const item2Array = [];
   const [leftItems, setLeftItems] = useState(item1Array);
